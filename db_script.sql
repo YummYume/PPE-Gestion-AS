@@ -22,7 +22,7 @@ CREATE TABLE CLASSE (
 
 -- Table ADHERENT
 CREATE TABLE ADHERENT (
-	ID_adherent int NOT NULL,
+	ID_adherent int NOT NULL IDENTITY (1, 1),
 	Nom_adherent varchar(255) NOT NULL,
 	Prenom_adherent varchar(255) NOT NULL,
 	Ddn_adherent date NOT NULL,
