@@ -52,6 +52,7 @@ CREATE TABLE BUDGET (
 	ID_budget int NOT NULL IDENTITY (1, 1),
 	Libelle_budget varchar(255) NOT NULL,
 	Montantinitial_budget varchar(255) NOT NULL,
+	DateCreation_dubget date NOT NULL,
 	CONSTRAINT ID_budget PRIMARY KEY NONCLUSTERED (ID_budget),
 );
 
@@ -101,3 +102,7 @@ CREATE TABLE FLUX (
 GO
 
 -- Recharger la DB!
+
+INSERT INTO dbo.TYPE_FLUX (ID_typeflux, Libelle_typeflux)
+VALUES (1, "Débit"),
+(2, "Crédit")
