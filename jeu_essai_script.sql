@@ -15,7 +15,7 @@ VALUES('BTS1'),
 ('SecondeB'),
 ('PremiereB');
 
-INSERT INTO dbo.ADHERENT (Nom_adherent, Prenom_adherent, Ddn_adherent, Sexe_adherent, Login_adherent_adherent, Mdp_adherent, Numtel_adherent, Email_adherent, Numparent_adherent, Archive_adherent, #Id_Utilisateur, #Id_classe)
+INSERT INTO dbo.ADHERENT (Nom_adherent, Prenom_adherent, Ddn_adherent, Sexe_adherent, Login_adherent, Mdp_adherent, Numtel_adherent, Email_adherent, Numparent_adherent, Archive_adherent, #Id_Utilisateur, #Id_classe)
 VALUES('Bruant', 'Léo', '2001-06-14', 'Homme', 'Lespectre', 'UwUOwO', '0659393020', 'LéoBruant@gmail.com', '0628592053', 0, 1, 2),
 ('Louis-Joseph', 'Kyllian', '2001-04-21', 'Homme', 'Prxph3te', 'LoliWtf', '0623256939', 'KykyLeBg@gmail.com', '0632235649', 0, 2, 1),
 ('Evenot', 'Tristan', '2001-03-12', 'Homme', 'Inconious', 'OsuProPlayer', '0724526930', 'Tristou@gmail.com', '0635693496', 0, 3, 3),

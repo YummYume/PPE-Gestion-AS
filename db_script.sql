@@ -1,5 +1,5 @@
 -- On crée la base
--- CREATE DATABASE PPE;
+CREATE DATABASE PPE;
 
 -- On se positionne sur la base PPE pour insérer les tables
 USE PPE;
@@ -27,7 +27,7 @@ CREATE TABLE ADHERENT (
 	Prenom_adherent varchar(255) NOT NULL,
 	Ddn_adherent date NOT NULL,
 	Sexe_adherent varchar(255) NOT NULL,
-	Login_adherent_adherent varchar(255) NOT NULL,
+	Login_adherent varchar(255) NOT NULL,
 	Mdp_adherent varchar(255) NOT NULL,
 	Numtel_adherent varchar(255) NOT NULL,
 	Email_adherent varchar(255) NOT NULL,
@@ -51,8 +51,8 @@ CREATE TABLE ADHERENT (
 CREATE TABLE BUDGET (
 	ID_budget int NOT NULL IDENTITY (1, 1),
 	Libelle_budget varchar(255) NOT NULL,
-	Montantinitial_budget varchar(255) NOT NULL,
-	DateCreation_dubget date NOT NULL,
+	Montantinitial_budget float NOT NULL,
+	DateCreation_budget date NOT NULL,
 	CONSTRAINT ID_budget PRIMARY KEY NONCLUSTERED (ID_budget),
 );
 
@@ -83,6 +83,7 @@ CREATE TABLE FLUX (
 	#ID_adherent int NOT NULL,
 	#ID_typeflux int NOT NULL,
 	#ID_evenement int NOT NULL,
+	#ID_budget int NOT NULL,
 	CONSTRAINT ID_flux PRIMARY KEY NONCLUSTERED (ID_flux),
 	CONSTRAINT ID_adherent_flux FOREIGN KEY (#ID_adherent)
         REFERENCES ADHERENT (ID_adherent)
@@ -95,6 +96,10 @@ CREATE TABLE FLUX (
 	CONSTRAINT ID_evenement_flux FOREIGN KEY (#ID_evenement)
         REFERENCES EVENEMENT (ID_evenement)
         ON DELETE CASCADE
+        ON UPDATE CASCADE,
+    CONSTRAINT ID_budget_flux FOREIGN KEY (#ID_budget)
+        REFERENCES BUDGET (ID_budget)
+        ON DELETE CASCADE
         ON UPDATE CASCADE
 );
 
@@ -103,6 +108,6 @@ GO
 
 -- Recharger la DB!
 
-INSERT INTO dbo.TYPE_FLUX (ID_typeflux, Libelle_typeflux)
-VALUES (1, "Débit"),
-(2, "Crédit")
+INSERT INTO dbo.TYPE_FLUX (Libelle_typeflux)
+VALUES ('Débit'),
+('Crédit')
