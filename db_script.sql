@@ -33,8 +33,6 @@ CREATE TABLE ADHERENT (
 	Email_adherent varchar(255) NOT NULL,
 	Numparent_adherent varchar(255) NOT NULL,
 	Datemaj_adherent date,
-	Prelevement_autorise_adherent tinyint NOT NULL,
-	Sweet_adherent tinyint NOT NULL,
 	Archive_adherent tinyint NOT NULL,
 	#ID_Utilisateur int,
 	#ID_classe int NOT NULL,
@@ -71,6 +69,7 @@ CREATE TABLE EVENEMENT (
 	Libelle_evenement varchar(255) NOT NULL,
 	Date_evenement date NOT NULL,
 	Lieu_evenement varchar(255) NOT NULL,
+	Cout_evenement float NOT NULL,
 	CONSTRAINT ID_evenement PRIMARY KEY NONCLUSTERED (ID_evenement),
 );
 
