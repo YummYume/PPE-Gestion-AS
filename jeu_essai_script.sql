@@ -22,4 +22,7 @@ VALUES('Bruant', 'Léo', '2001-06-14', 'Homme', 'Lespectre', 'UwUOwO', '06593930
 ('Jeon', 'So-Yeon', '1998-08-28', 'Femme', 'So-Yeon', 'Akali', '0603569360', 'Akali@gmail.com', '0643604030', 1, 1, 6),
 ('Maxence', 'lilcock', '1998-06-12', 'Homme', 'Maxmlk', 'bold', '0634935935', 'Maxence@gmail.com', '064739539', 0, 2, 7);
 
+INSERT INTO dbo.EVENEMENT (Libelle_evenement, Date_evenement, Lieu_evenement, Cout_evenement)
+VALUES('Sprint', '2021-05-06', 'Senlis', 10)
+
 GO
